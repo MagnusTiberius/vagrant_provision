@@ -1,6 +1,15 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+$set_environment_variables = <<SCRIPT
+tee "/etc/profile.d/myvars.sh" > "/dev/null" <<EOF
+sudo export GOROOT="/usr/local/go"
+sudo export GOPATH="$HOME/go"
+sudo export PATH="$PATH:$GOROOT/path:%GOPATH/bin"
+sudo export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+EOF
+SCRIPT
+
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -18,6 +27,9 @@ Vagrant.configure("2") do |config|
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
   config.vm.box_check_update = false
+  
+  config.vm.provision "shell", inline: $set_environment_variables, run: "always"
+  
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/MagnusTiberius/vagrant_provision/master/setupbox.sh"
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
