@@ -5,6 +5,10 @@ sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz >/dev/n
 sudo tar -zxvf go1.9.linux-amd64.tar.gz
 sudo mv go /usr/local
 
+sudo export GOROOT="/usr/local/go"
+sudo export GOPATH="$HOME/go"
+sudo export PATH="$PATH:$GOROOT/path:%GOPATH/bin"
+
 #install git
 sudo apt-get -y install git
 
