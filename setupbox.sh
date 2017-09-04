@@ -31,7 +31,7 @@ sudo docker run hello-world
 
 
 #install google cloud sdk
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-169.0.0-linux-x86_64.tar.gz >/dev/null 2>&1
+#wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-169.0.0-linux-x86_64.tar.gz >/dev/null 2>&1
 sudo tar -xzvf google-cloud-sdk-169.0.0-linux-x86_64.tar.gz
 ./google-cloud-sdk/install.sh
 
