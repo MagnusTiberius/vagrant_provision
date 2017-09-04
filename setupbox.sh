@@ -27,3 +27,8 @@ sudo tar -xzvf google-cloud-sdk-169.0.0-linux-x86_64.tar.gz
 ./google-cloud-sdk/install.sh
 
 
+#run daemon
+sudo dockerd &
+
+#run couchbase
+sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
