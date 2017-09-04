@@ -1,4 +1,4 @@
-# vagrant_provision
+# Vagrant Provision Ubuntu Trusty
 Vagrant provision script for ubuntu/trusty64
 
 The following items are in the provision:
