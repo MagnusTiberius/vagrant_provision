@@ -10,7 +10,7 @@ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 EOF
 SCRIPT
 
-$installgo_script = <<-SCRIPT
+$install_go_apps_script = <<-SCRIPT
 go get -u github.com/golang/protobuf/proto
 go get -u github.com/golang/protobuf/protoc-gen-go
 go get -u google.golang.org/grpc
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $set_environment_variables, run: "always"
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/MagnusTiberius/vagrant_provision/master/setupbox.sh"
   config.vm.provision "shell", inline: $run_daemons, run: "always"
-  config.vm.provision "shell", inline: $installgo_script, privileged: false
+  config.vm.provision "shell", inline: $install_go_apps_script, privileged: false
 
 
   # Create a forwarded port mapping which allows access to a specific port
