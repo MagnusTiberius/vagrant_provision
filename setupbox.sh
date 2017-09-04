@@ -31,7 +31,8 @@ sudo tar -xzvf google-cloud-sdk-169.0.0-linux-x86_64.tar.gz
 curl -O http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-3-amd64.deb 
 sudo dpkg -i couchbase-release-1.0-3-amd64.deb
 sudo apt-get update
-sudo apt-get install -y couchbase-server-community
+sudo apt-get install couchbase-server
+#sudo apt-get install -y couchbase-server-community
 
 #run couchbase
 #sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
