@@ -3,10 +3,10 @@
 
 $set_environment_variables = <<SCRIPT
 tee "/etc/profile.d/myvars.sh" > "/dev/null" <<EOF
-sudo export GOROOT="/usr/local/go"
-sudo export GOPATH="$HOME/go"
-sudo export PATH="$PATH:$GOROOT/bin:%GOPATH/bin"
-sudo export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOROOT/bin:%GOPATH/bin"
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 EOF
 SCRIPT
 
