@@ -9,9 +9,9 @@ sudo mv go /usr/local
 sudo apt-get install git
 
 #install gRPC
-go get -u github.com/golang/protobuf/proto
-go get -u github.com/golang/protobuf/protoc-gen-go
-go get -u google.golang.org/grpc
+sudo go get -u github.com/golang/protobuf/proto
+sudo go get -u github.com/golang/protobuf/protoc-gen-go
+sudo go get -u google.golang.org/grpc
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -22,9 +22,9 @@ sudo tar -xzvf docker-17.03.0-ce.tgz
 sudo cp docker/* /usr/bin/
 
 #fix: ref-> https://stackoverflow.com/questions/24396071/docker-error-mountpoint-not-found
-apt-get install cgroup-bin
+sudo apt-get install cgroup-bin
 
 sudo dockerd &
 
 #test
-docker run hello-world
+sudo docker run hello-world
