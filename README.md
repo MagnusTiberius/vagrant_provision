@@ -6,7 +6,7 @@ The following items are in the provision:
 1. Golang 9 (go1.9.linux-amd64.tar.gz)
 2. Git
 3. Docker (docker-17.03.0-ce.tgz)
-4. Google Cloud SDK
+4. Google Cloud SDK (google-cloud-sdk-169.0.0-linux-x86_64.tar.gz)
 5. CouchBase (couchbase-release-1.0-3-amd64.deb)
 
 
