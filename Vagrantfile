@@ -107,3 +107,5 @@ end
 
 #ref
 #http://aruizca.com/steps-to-create-a-vagrant-base-box-with-ubuntu-14-04-desktop-gui-and-virtualbox/
+#https://developer.couchbase.com/documentation/server/current/install/ubuntu-debian-install.html
+#https://developer.couchbase.com/documentation/server/4.1/install/linux-startup-shutdown.html
