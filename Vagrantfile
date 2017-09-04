@@ -10,6 +10,12 @@ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 EOF
 SCRIPT
 
+$installgo_script = <<-SCRIPT
+go get -u github.com/golang/protobuf/proto
+go get -u github.com/golang/protobuf/protoc-gen-go
+go get -u google.golang.org/grpc
+  SCRIPT
+
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -29,8 +35,10 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
   
   config.vm.provision "shell", inline: $set_environment_variables, run: "always"
-  
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/MagnusTiberius/vagrant_provision/master/setupbox.sh"
+  config.vm.provision "shell", inline: $installgo_script, privileged: false
+
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
