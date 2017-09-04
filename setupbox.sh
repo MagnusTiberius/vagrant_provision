@@ -25,3 +25,6 @@ sudo cp docker/* /usr/bin/
 apt-get install cgroup-bin
 
 sudo dockerd &
+
+#test
+docker run hello-world
