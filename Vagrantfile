@@ -14,6 +14,10 @@ $install_go_apps_script = <<-SCRIPT
 go get -u github.com/golang/protobuf/proto
 go get -u github.com/golang/protobuf/protoc-gen-go
 go get -u google.golang.org/grpc
+go get -u github.com/go-swagger/go-swagger/cmd/swagger
+go get -u github.com/spf13/cobra/cobra
+go get -u go.uber.org/zap
+go get -u github.com/golang/dep/cmd/dep
 SCRIPT
 
 
