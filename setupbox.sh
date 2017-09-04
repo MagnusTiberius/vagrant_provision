@@ -31,10 +31,8 @@ sudo docker run hello-world
 
 
 #install google cloud sdk
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-169.0.0-linux-x86_64.tar.gz >/dev/null 2>&1
+sudo tar -xzvf google-cloud-sdk-169.0.0-linux-x86_64.tar.gz
+./google-cloud-sdk/install.sh
 
-#sudo echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-sudo curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-#sudo sudo apt-get update  
-sudo apt-get -y install google-cloud-sdk
-sudo apt-get -y install kubectl
 
