@@ -25,7 +25,6 @@ SCRIPT
 
 $run_daemons = <<-SCRIPT
 sudo dockerd &
-sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
 SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
