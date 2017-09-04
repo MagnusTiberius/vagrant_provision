@@ -34,5 +34,3 @@ sudo apt-get update
 sudo apt-get install -y --force-yes couchbase-server
 #sudo apt-get install -y couchbase-server-community
 
-#run couchbase
-#sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
