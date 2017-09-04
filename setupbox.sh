@@ -9,9 +9,9 @@ sudo mv go /usr/local
 sudo apt-get -y install git
 
 #install gRPC
-sudo go get -u github.com/golang/protobuf/proto
-sudo go get -u github.com/golang/protobuf/protoc-gen-go
-sudo go get -u google.golang.org/grpc
+go get -u github.com/golang/protobuf/proto
+go get -u github.com/golang/protobuf/protoc-gen-go
+go get -u google.golang.org/grpc
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
