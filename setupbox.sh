@@ -5,10 +5,6 @@ sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz >/dev/n
 sudo tar -zxvf go1.9.linux-amd64.tar.gz
 sudo mv go /usr/local
 
-sudo GOROOT="/usr/local/go"
-sudo GOPATH="$HOME/go"
-sudo PATH="$PATH:$GOROOT/path:%GOPATH/bin"
-
 #install git
 sudo apt-get -y install git
 
@@ -35,7 +31,7 @@ sudo docker run hello-world
 
 
 #install google cloud sdk
-sudo CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+
 #sudo echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 sudo curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 #sudo sudo apt-get update  
