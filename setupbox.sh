@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #install golang
-sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz >/dev/null 2>&1
+#sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz >/dev/null 2>&1
 sudo tar -zxvf go1.9.linux-amd64.tar.gz
 sudo mv go /usr/local
 
@@ -17,7 +17,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 #install docker
-sudo wget https://download.docker.com/linux/static/stable/x86_64/docker-17.03.0-ce.tgz >/dev/null 2>&1
+#sudo wget https://download.docker.com/linux/static/stable/x86_64/docker-17.03.0-ce.tgz >/dev/null 2>&1
 sudo tar -xzvf docker-17.03.0-ce.tgz
 sudo cp docker/* /usr/bin/
 
