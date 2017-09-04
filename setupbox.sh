@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #install golang
-sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz >/dev/null 2>&1
+#sudo wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz >/dev/null 2>&1
 sudo tar -zxvf go1.9.linux-amd64.tar.gz
 sudo mv go /usr/local
 
@@ -22,7 +22,7 @@ sudo apt-get -y install cgroup-bin
 
 
 #install google cloud sdk
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-169.0.0-linux-x86_64.tar.gz >/dev/null 2>&1
+#wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-169.0.0-linux-x86_64.tar.gz >/dev/null 2>&1
 sudo tar -xzvf google-cloud-sdk-169.0.0-linux-x86_64.tar.gz
 ./google-cloud-sdk/install.sh
 
