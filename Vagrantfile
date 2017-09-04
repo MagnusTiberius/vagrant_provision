@@ -17,10 +17,10 @@ go get -u google.golang.org/grpc
 SCRIPT
 
 
-$run_daemons = <<-SCRIPT
-sudo dockerd &
-sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
-SCRIPT
+#$run_daemons = <<-SCRIPT
+#sudo dockerd &
+#sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
+#SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision "shell", inline: $set_environment_variables, run: "always"
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/MagnusTiberius/vagrant_provision/master/setupbox.sh"
-  config.vm.provision "shell", inline: $run_daemons, run: "always", privileged: false
+  #config.vm.provision "shell", inline: $run_daemons, run: "always", privileged: false
   config.vm.provision "shell", inline: $installgo_script, privileged: false
 
 
