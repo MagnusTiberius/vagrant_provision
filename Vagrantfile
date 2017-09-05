@@ -25,6 +25,7 @@ SCRIPT
 
 $run_daemons = <<-SCRIPT
 sudo dockerd &
+sudo docker run -d -p 8091-8093:8091-8093 -p 11210:11210 couchbase
 SCRIPT
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
@@ -44,18 +45,27 @@ Vagrant.configure("2") do |config|
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
   config.vm.box_check_update = false
-  
-  
+
+
   config.vm.provision "shell", inline: $set_environment_variables, run: "always"
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/MagnusTiberius/vagrant_provision/master/setupbox.sh"
-  config.vm.provision "shell", inline: $run_daemons, run: "always"
+  #config.vm.provision "shell", inline: $run_daemons, run: "always"
   config.vm.provision "shell", inline: $install_go_apps_script, privileged: false
 
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8091, host: 8091
+  config.vm.network "forwarded_port", guest: 8092, host: 8092
+  config.vm.network "forwarded_port", guest: 11207, host: 11207
+  config.vm.network "forwarded_port", guest: 11210, host: 11210
+  config.vm.network "forwarded_port", guest: 11211, host: 11211
+  config.vm.network "forwarded_port", guest: 11214, host: 11214
+  config.vm.network "forwarded_port", guest: 11215, host: 11215
+  config.vm.network "forwarded_port", guest: 18091, host: 18091
+  config.vm.network "forwarded_port", guest: 18092, host: 18092
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -106,5 +116,3 @@ end
 
 #ref
 #http://aruizca.com/steps-to-create-a-vagrant-base-box-with-ubuntu-14-04-desktop-gui-and-virtualbox/
-#https://developer.couchbase.com/documentation/server/current/install/ubuntu-debian-install.html
-#https://developer.couchbase.com/documentation/server/4.1/install/linux-startup-shutdown.html
