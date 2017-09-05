@@ -25,7 +25,16 @@ Golang Projects:
 Environment Variables:
 1. GOROOT
 2. GOPATH
-
 Notes:
 1. Run docker server: $ sudo dockerd&
 2. Couchbase web admin: http://127.0.0.1:8091
+
+
+Features for next version:
+1. Multi-machine config
+2. Kubernetes
+
+
+Contact:
+Ben Gonzales
+bgonzales20001@gmail.com
