@@ -1,6 +1,9 @@
 # Vagrant Provision Ubuntu Trusty
 Vagrant provision script for ubuntu/trusty64
 
+Vagrant Box location: 
+https://app.vagrantup.com/MagnusTiberius/boxes/couchbase_golang
+
 The following items are in the provision:
 
 1. Golang 9 (go1.9.linux-amd64.tar.gz)
