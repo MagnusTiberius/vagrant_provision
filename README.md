@@ -18,3 +18,11 @@ Golang Projects:
 5. github.com/spf13/cobra/cobra
 6. go.uber.org/zap
 7. github.com/golang/dep/cmd/dep
+
+Environment Variables:
+1. GOROOT
+2. GOPATH
+
+Notes:
+1. Run docker server: $ sudo dockerd&
+2. Couchbase web admin: http://127.0.0.1:8091
